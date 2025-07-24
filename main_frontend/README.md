@@ -1,82 +1,29 @@
-# Lightweight React Template for KAVIA
+# CodeReview Assistant Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+This project provides a minimal, modern React UI for code review analysis powered by backend LLM/code tools.
+
+## Architectural Overview
+
+- **Sidebar Navigation**: Modern/minimal vertical sidebar with logo, navigation for current results, history, and placeholder for settings.
+- **Top Bar**: Clean actions panel for uploading repo directory and toggling light/dark theme.
+- **Main Workspace**: Responsive cards for auto-generated Git commit messages, code optimization suggestions, and flagged issues, using clear color accents and warning highlights as per color scheme (#606c80, #333333, #f5f5f7).
+- **Upload Directory Modal**: Minimal, clear modal overlay for path entry.
+- **Responsive**: Fully responsive – sidebar collapses/vanishes on mobile for a workspace-first experience.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
-
-## Getting Started
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Upload repository directory path for analysis
+- Displays commit message suggestions, code optimizations, issues
+- History of previous analyses
+- Theming/light-dark toggle
+- Accessible, fast, framework-free CSS (see `src/krStyle.css`)
+- Easy future extension (user login, settings, etc.)
 
 ## Customization
 
-### Colors
+All layout and styles are handled in `src/krStyle.css`.
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+---
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+To learn more about extending this template, see [React documentation](https://reactjs.org/).
 
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
