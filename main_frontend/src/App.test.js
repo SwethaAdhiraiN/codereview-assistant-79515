@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+// PUBLIC_INTERFACE
+test('renders the Results header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // The Results header (for current analysis tab) is always present in the default UI.
+  const headerElement = screen.getByRole('heading', { name: /results/i });
+  expect(headerElement).toBeInTheDocument();
 });
